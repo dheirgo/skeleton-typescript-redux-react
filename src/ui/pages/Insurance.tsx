@@ -1,4 +1,5 @@
 import { useInsurances } from '../hooks/useInsurances';
+import InsuranceListItem from '../widgets/InsuranceListItem';
 
 export function Insurance() {
 
@@ -7,7 +8,7 @@ export function Insurance() {
     return (
         <div>
             {
-                insurances.map(insurance => (<p>{insurance.name}</p>))
+                insurances.map(insurance => InsuranceListItem({insurance}))
             }
         </div>
     )

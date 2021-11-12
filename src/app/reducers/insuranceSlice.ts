@@ -20,14 +20,18 @@ const insuranceSlice = createSlice({
 
         addInsurance: (state: InsuranceState, action: PayloadAction<Insurance>) => {
             state.insurances.push(action.payload);
+        },
+
+        deleteInsurance: (state: InsuranceState, action: PayloadAction<string>) => {
+            state.insurances = state.insurances.filter(insurance => insurance.id !== action.payload);
         }
     }
 });
 
 const getInsurances = (state: RootState) => state['insurance'].insurances;
 
-const { changeInsurances, addInsurance } = insuranceSlice.actions;
+const { changeInsurances, addInsurance, deleteInsurance } = insuranceSlice.actions;
 
-export { getInsurances, changeInsurances, addInsurance };
+export { getInsurances, changeInsurances, addInsurance, deleteInsurance };
 
 export default insuranceSlice.reducer;
