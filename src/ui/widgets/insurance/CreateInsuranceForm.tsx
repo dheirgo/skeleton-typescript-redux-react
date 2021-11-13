@@ -63,7 +63,8 @@ const CreateInsuranceForm = () => {
 
 const useStyles = makeStyles((theme: Theme) => ({
     button: {
-        margin: theme.spacing(1)
+        margin: theme.spacing(1),
+        borderColor: theme.palette.primary.main
     }
 }));
 
