@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../app/config/hooks";
-import { fetchInsurancesAction } from '../../app/actions/insuranceActions';
+import { deleteInsuranceAction, fetchInsurancesAction } from '../../app/actions/insuranceActions';
 import { getInsurances } from "../../app/reducers/insuranceSlice";
 
 export const useInsurances = () => {
@@ -16,7 +16,13 @@ export const useInsurances = () => {
         // eslint-disable-next-line
     }, []);
 
+    const onClickDeleteInsurance = (insuranceId: string) => {
+        dispatch(deleteInsuranceAction(insuranceId));
+    }
+
     return {
-        insurances
+        insurances,
+
+        onClickDeleteInsurance
     };
 };

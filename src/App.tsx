@@ -1,18 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
+import { CssBaseline } from '@mui/material';
+import ThemeProvider from '@mui/material/styles/ThemeProvider';
 import './App.css';
-import { Insurance } from './ui/pages/Insurance';
-import CreateInsuranceForm from './ui/widgets/CreateInsuranceForm';
+import AppNavigation from './ui/navigation';
+import DefaultTheme from './ui/themes/DefaultTheme';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Insurance />
-        <CreateInsuranceForm />
-      </header>
-
+      <ThemeProvider theme={DefaultTheme}>
+        <CssBaseline />
+        <AppNavigation />
+      </ThemeProvider>
     </div>
   );
 }

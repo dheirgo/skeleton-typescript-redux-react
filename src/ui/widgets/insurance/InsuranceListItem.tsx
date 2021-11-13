@@ -1,8 +1,8 @@
 import { IconButton } from "@mui/material";
 import { Delete as DeleteIcon } from "@mui/icons-material";
-import { Insurance } from "../../domain/Insurance";
-import { useAppDispatch } from '../../app/config/hooks';
-import { deleteInsuranceAction } from '../../app/actions/insuranceActions';
+import { Insurance } from "../../../domain/Insurance";
+import { useAppDispatch } from '../../../app/config/hooks';
+import { deleteInsuranceAction } from '../../../app/actions/insuranceActions';
 
 interface Props {
     insurance: Insurance
