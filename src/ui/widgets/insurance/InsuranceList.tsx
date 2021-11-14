@@ -1,19 +1,18 @@
+import { useInsurances } from '../../hooks/useInsurances';
 import { Insurance } from '../../../domain/Insurance';
 import IconButton from '@mui/material/IconButton';
 import { Delete as DeleteIcon } from '@mui/icons-material';
 
-interface InsuranceListProps {
-    insurances: Insurance[],
-    onClickDeleteInsurance: (insuranceId: string) => void
-}
 
-export function InsuranceList({insurances, onClickDeleteInsurance}: InsuranceListProps) {
+export function InsuranceList() {
+
+    const { insurances, onClickDeleteInsurance } = useInsurances();
 
     return (
         <div>
             {
                 insurances.map(insurance => 
-                    _InsuranceListItem({ insurance, onClickDeleteButton: onClickDeleteInsurance })
+                    _InsuranceListItem({insurance: insurance, onClickDeleteButton: onClickDeleteInsurance})
                 )
             }
         </div>

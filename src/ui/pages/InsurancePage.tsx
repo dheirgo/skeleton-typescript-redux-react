@@ -1,26 +1,29 @@
 import { InsuranceList } from '../widgets/insurance/InsuranceList';
 import CreateInsuranceForm from '../widgets/insurance/CreateInsuranceForm';
-import { Fragment } from 'react';
+import { Fragment, useEffect } from 'react';
 import AppBarWithBackButton from '../widgets/commons/AppBarWithBackButton';
 import { Button, Container } from '@material-ui/core';
 import Loading from '../widgets/commons/Loading';
 import { useInsurances } from '../hooks/useInsurances';
 
 const InsurancePage = () => {  
-
     const {
         filter, 
-        insurances, 
         status,
+        initInsurances,
         onClickChangeFilterButton, 
-        onClickDeleteInsurance
     } = useInsurances();
+
+    useEffect(() => {
+        initInsurances();
+        // eslint-disable-next-line
+    }, []);
 
     return (
         <Fragment>
             <AppBarWithBackButton title={"Insurances"} />
             <Container>
-                <InsuranceList insurances={insurances} onClickDeleteInsurance={onClickDeleteInsurance} />
+                <InsuranceList />
                 <CreateInsuranceForm />
                 <div>
                     <p>{JSON.stringify(filter, undefined, 3)}</p>
