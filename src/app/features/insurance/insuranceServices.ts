@@ -1,5 +1,5 @@
-import { deleteRequest, getRequest, postRequest } from "../http";
-import { Insurance } from "../../domain/Insurance";
+import { deleteRequest, getRequest, postRequest } from "../../config/http";
+import { Insurance } from "../../../domain/Insurance";
 
 export async function findInsurancesAsync(): Promise<Insurance[]> {
     const response: any[] = await getRequest('/insurances');

@@ -1,10 +1,13 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import insuranceSlice from '../reducers/insuranceSlice';
+import insuranceSlice from '../features/insurance/insuranceSlice';
 
 export const store = configureStore({
   reducer: {
     insurance: insuranceSlice
   },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+    serializableCheck: false
+  })
 });
 
 export type AppDispatch = typeof store.dispatch;

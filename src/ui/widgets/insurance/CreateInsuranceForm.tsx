@@ -1,11 +1,11 @@
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { useAppDispatch } from '../../../app/config/hooks';
-import { createInsuranceAction } from '../../../app/actions/insuranceActions';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { makeStyles } from '@mui/styles';
 import { Theme } from '@mui/material';
+import { createInsurance } from '../../../app/features/insurance/insuranceThunks';
 
 const CreateInsuranceForm = () => {
     const classes = useStyles();
@@ -27,7 +27,7 @@ const CreateInsuranceForm = () => {
                 onSubmit={(values, { resetForm }) => {
                     const form = createInsuranceSchema.cast(values);
                     if (form.name !== undefined) {
-                        dispatch(createInsuranceAction(form.name));
+                        dispatch(createInsurance(form.name));
                         resetForm();
                     }
                 }}

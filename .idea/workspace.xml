@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1480d9e8-f994-47c0-a6b0-e1172e58fdf6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ui/pages/InsurancePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/pages/Insurance.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/pages/InsuranceList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +41,7 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -68,6 +67,8 @@
       <updated>1636745657195</updated>
       <workItem from="1636745661163" duration="11331000" />
       <workItem from="1636802381417" duration="138000" />
+      <workItem from="1636883830803" duration="124000" />
+      <workItem from="1636884012504" duration="1096000" />
     </task>
     <servers />
   </component>
